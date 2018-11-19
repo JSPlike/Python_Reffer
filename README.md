@@ -10,4 +10,16 @@
   - CodeRunner
 - Output
   - using "print"
-- 문자열 관련 함수
+  - Variable
+  - compare & boolean
+- String
+  - (", ', \, \n)
+  - upper
+  - lower
+  - strip
+  - find
+  - replace
+- Conditinal Statement
+- and, or, not
+- Loop
+
