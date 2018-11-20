@@ -22,4 +22,5 @@
 - Conditinal Statement
 - and, or, not
 - Loop
+- Function
 
