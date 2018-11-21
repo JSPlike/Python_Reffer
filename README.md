@@ -19,6 +19,7 @@
   - strip
   - find
   - replace
+- Math
 - Conditinal Statement
 - and, or, not
 - Loop
@@ -26,12 +27,14 @@
 
 ----
 
-1. Output
+## Output
+
+1. using "print"
 
 ```
 print("Hello World!!")
 ```
-
+> 파이썬에서는 print() 명령어로 문자열이나 변수등을 출력할 수 있다.
 
 
 
