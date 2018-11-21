@@ -24,3 +24,14 @@
 - Loop
 - Function
 
+----
+
+1. Output
+
+```
+print("Hello World!!")
+```
+
+
+
+
