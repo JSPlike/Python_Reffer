@@ -361,7 +361,47 @@ string | value -> 문자열형
 
 복잡하고 어렵쥬? 이해하는데 오래걸릴거 같아 보여유
 
-#### 4-2) 상속(Inheritance)
+#### 4-2) 상속(Inheritance) 응용
+
+기존의 계산기 프로그램 ([참고] 생활코딩)을 상속을 활용하여 수정해봅시다.
+
+```
+  class Cal(object):
+      def __init__(self, v1, v2):
+          if isinstance(v1, int):
+              self.v1 = v1
+          if isinstance(v2, int):
+              self.v2 = v2
+      def add(self):
+          return self.v1+self.v2
+      def subtract(self):
+          return self.v1-self.v2
+      def setV1(self, v):
+          if isinstance(v, int):
+              self.v1 = v
+      def getV1(self):
+          return self.v1
+  class CalMultiply(Cal):
+      def multiply(self):
+          return self.v1*self.v2
+  class CalDivide(CalMultiply):
+      def divide(self):
+          return self.v1/self.v2
+  c1 = CalMultiply(10,10)
+  print(c1.add())
+  print(c1.multiply())
+  c2 = CalDivide(20,10)
+  print(c2, c2.add())
+  print(c2, c2.multiply())
+  print(c2, c2.divide())
+
+```
+> **Result**  
+>> 20  
+>> 100  
+>> <__main__.CalDivide object at 0x000000000316CDA0> 30  
+>> <__main__.CalDivide object at 0x000000000316CDA0> 200  
+>> <__main__.CalDivide object at 0x000000000316CDA0> 2.0
 
 ## 파이썬 클래스 멤버
 
