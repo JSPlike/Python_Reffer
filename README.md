@@ -322,9 +322,13 @@ string | value -> 문자열형
   > university.university_name = '전남대학교'
 ```
 만약 ```setter``` 프로퍼티를 명시하지 않으면 읽기전용(```read-only```)이 되어 외부에서 값을 변경할 수 없습니다.  
-```setter``` 프로퍼티를 주석처리하면 ```can't set attribute```의 출력결과를 얻습니다.
+```setter``` 프로퍼티를 주석처리하면 ```can't set attribute```의 출력결과를 얻습니다.  
 
-## 파이썬 상속
+어렵다면 일단 넘어가자.
+
+### 4. 상속
+
+blah blah
 
 ## 파이썬 클래스 멤버
 
