@@ -411,7 +411,7 @@ string | value -> 문자열형
 http://pythonstudy.xyz/python/article/19-%ED%81%B4%EB%9E%98%EC%8A%A4  
 존나 설명 잘됨
 
-# 먼 개소리인지 하나도 이해 안되~~~
+# 준영아, 먼 개소리인지 하나도 이해 안되 살려줘
 ![d0e959371d21e7682b4460c9544ef36d_pulling-hair-out-quotes-pulling-hair-out-of-head-clipart_2700-1962-1440x1046](https://user-images.githubusercontent.com/45117394/49106040-6dd5b000-f2c5-11e8-9783-fcab9f4170ff.jpeg)
 
 생활코딩 새벽 4시 22분까지 듣다가 멘탈 터짐 ㅂ2  ㅅㄱ
