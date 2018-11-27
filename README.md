@@ -191,14 +191,12 @@ string | value -> 문자열형
 하나의 부품(객체)과 케이스(함수)를 만든다면 이들을 클래스라고 정의해줄 수 있으며, 이 과정을 '캡슐화' 라고 말 할 수 있다.
 
 ```
-  class C:
-  # C라는 클래스를 생성한다.
-    def __init__(self, v):
-  # 생성자 __init__ 초기화
+  class C:                      # C라는 클래스를 생성한다.
+    def __init__(self, v):      # 생성자 __init__ 초기화
         self.value = v
-  c1 = C(10)
-  # 인스턴스를 가르킬 c1
-  print(c1.value)
+  c1 = C(10)                    # 인스턴스를 가르킬 c1
+  
+  print(c1.value)               # 인스턴스 c1의 value의 값을 출력한다.
   c1.value = 20
   print(c1.value)
   
