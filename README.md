@@ -265,7 +265,7 @@ string | value -> 문자열형
 > 40  
 > -20
 
-나도 솔직히 무슨말인지 모르겠으니, 밑에 속성으로 내려가보자.
+이해됨? 나도 솔직히 무슨말인지 모르겠으니, 밑에 속성으로 내려가보자.
 
 #### 3-3) 속성(Property)
 
@@ -324,7 +324,7 @@ string | value -> 문자열형
 만약 ```setter``` 프로퍼티를 명시하지 않으면 읽기전용(```read-only```)이 되어 외부에서 값을 변경할 수 없습니다.  
 ```setter``` 프로퍼티를 주석처리하면 ```can't set attribute```의 출력결과를 얻습니다.  
 
-어렵다면 일단 넘어가자.
+먼소린지 모르겠죠, 저도 그래요. 일단 다음으로 
 
 ### 4. 상속(Inheritance)
 #### 4-1) 상속의 개념
@@ -359,7 +359,7 @@ string | value -> 문자열형
 >> <__main__.Class2 object at 0xb758708c> m1  
 >> <__main__.Class2 object at 0xb758708c> m2  
 
-복잡하고 어렵쥬? 이해하는데 오래걸릴거 같아 보여유
+먼소린지 모르겠죠, 저도 그래요
 
 #### 4-2) 상속(Inheritance) 응용
 
@@ -414,6 +414,6 @@ http://pythonstudy.xyz/python/article/19-%ED%81%B4%EB%9E%98%EC%8A%A4
 # 먼 개소리인지 하나도 이해 안되~~~
 ![d0e959371d21e7682b4460c9544ef36d_pulling-hair-out-quotes-pulling-hair-out-of-head-clipart_2700-1962-1440x1046](https://user-images.githubusercontent.com/45117394/49106040-6dd5b000-f2c5-11e8-9783-fcab9f4170ff.jpeg)
 
----- 생활코딩 새벽 4시 22분 ---- 멘탈 터짐 ㅂ2 
+생활코딩 새벽 4시 22분까지 듣다가 멘탈 터짐 ㅂ2  ㅅㄱ
 
 ## 파이썬 Override
