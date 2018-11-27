@@ -159,7 +159,7 @@ string | value -> 문자열형
 
 ## 객체 지향 프로그래밍 대표 키워드 5가지
 > 1. Class(클래스) + Instance(객체)
-> 2. 추상화 (Abstract)
+> 2. 추상화 (Abstraction)
 > 3. 캡슐화 (Encapsulation)
 > 4. 상속 (Inheritance)
 > 5. 다형성 (Overriding)
@@ -169,13 +169,13 @@ string | value -> 문자열형
 
 ### 1. 클래스와 객체
 
-클래스(Class) = 추상(Abstract) = 타입(type) | 객체 or 오브젝트(Object) = 실체(instance) = 변수(variable)
+클래스(Class) = 추상(Abstraction) = 타입(type) | 객체 or 오브젝트(Object) = 실체(instance) = 변수(variable)
 --------- | -----------
 공통 특징 | 구체
 서술 | 실제 존재
 　| 고유성
 
-### 2. 추상화
+### 2. 추상화 (Abstraction)
 
 위의 내용에 따라 클래스의 공통의 속성이나 기능을 묶어 이름을 붙이는 것을 자료의 추상화라고 한다.  
 이해를 돕기위한 예시 :
