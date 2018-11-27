@@ -363,7 +363,7 @@ string | value -> 문자열형
 
 #### 4-2) 상속(Inheritance) 응용
 
-기존의 계산기 프로그램 ([참고] 생활코딩)을 상속을 활용하여 수정해봅시다.
+기존의 계산기 프로그램에 ([참고] 생활코딩)을 상속을 활용하여 곱하기와 나누기 기능을 추가&수정 해봅시다.
 
 ```
   class Cal(object):
@@ -381,13 +381,13 @@ string | value -> 문자열형
               self.v1 = v
       def getV1(self):
           return self.v1
-  class CalMultiply(Cal):
+  class CalMultiply(Cal):              # 곱하기
       def multiply(self):
           return self.v1*self.v2
-  class CalDivide(CalMultiply):
+  class CalDivide(CalMultiply):        # 나누기
       def divide(self):
           return self.v1/self.v2
-  c1 = CalMultiply(10,10)
+  c1 = CalMultiply(10,10)             
   print(c1.add())
   print(c1.multiply())
   c2 = CalDivide(20,10)
