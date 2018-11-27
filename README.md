@@ -272,7 +272,7 @@ string | value -> 문자열형
 > 40
 > -20
 
-나도 솔직히 무슨말인지 모르겠다. 
+나도 솔직히 무슨말인지 모르겠으니, 밑에 속성으로 내려가보자.
 
 #### 3-3) 속성
 
@@ -289,6 +289,40 @@ string | value -> 문자열형
 > 참고 : 변수명에 홑밑줄(_)과 겹밑줄(__)이 있습니다.
 >> 1. 홑밑줄(single underscore) : 보통 내부적으로 사용하는 변수일 때 사용합니다.
 >> 2. 곁밑줄(double underscore) : 클래스 외부에서 접근할 수 없도록 내부 변수로 만듭니다.
+
+```
+  class Cal(object):
+  
+  class University:
+    def __init__(self, university_name):
+        self.__university_name = university_name
+ 
+    @property
+    def university_name(self):                      # 이때 메서드 이름은 변수(속성)의 이름과 동일하게 하는 것이 좋습니다. 
+        return self.__university_name
+ 
+    @university_name.setter
+    def university_name(self, new_university_name): # 이때 메서드 이름은 변수(속성)의 이름과 동일하게 하는 것이 좋습니다. 
+        # 대학교 이름을 변경하는 setter 메서드
+        self.__university_name = new_university_name
+        print("============ setter를 통해 대학교 이름을 변경합니다============")
+        print('변경 후 대학 이름 : {} '.format(self.university_name))
+        
+    # 기존 코드
+    # movie = Movie('조선대학교')
+    # movie = Movie('전남대학교') # 속성을 변경하려면 호출자를 다시 수정해야 한다. 
+ 
+    # 개선된 코드
+    movie = Movie('조선대학교')
+    movie.movie_name = '전남대학교'
+  
+```
+> **Result**
+> 조선대학교
+
+> ============ setter를 통해 대학교 이름을 변경합니다============
+
+> 변경 후 대학 이름 : 전남대학교 
 
 
 ## 파이썬 상속
