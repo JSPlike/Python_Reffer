@@ -286,23 +286,22 @@ string | value -> 문자열형
         self.__university_name = university_name
  
     @property
-    def university_name(self):                      # 이때 메서드 이름은 변수(속성)의 이름과 동일하게 하는 것이 좋습니다. 
+    def university_name(self):                      # 이때 메서드 이름은 변수(속성)의 이름과 동일하게 하는 것이 좋다. 
         return self.__university_name
  
-    @university_name.setter
-    def university_name(self, new_university_name): # 이때 메서드 이름은 변수(속성)의 이름과 동일하게 하는 것이 좋습니다. 
+    @university_name.setter                         # @는 데커레이터(decorator)라고 하는데, 말그대로 뭔가를 꾸며주는 함수를 의미한다.
+                                                    # 같은 university_name 메서드이지만 장식자 @ 에 의해 서로 다른 역할을 한다.
+    def university_name(self, new_university_name): # 이때 메서드 이름은 변수(속성)의 이름과 동일하게 하는 것이 좋다. 
         # 대학교 이름을 변경하는 setter 메서드
         self.__university_name = new_university_name
         print("============ setter를 통해 대학교 이름을 변경합니다============")
         print('변경 후 대학 이름 : {} '.format(self.university_name))
         
-    # 기존 코드
-    # movie = Movie('조선대학교')
-    # movie = Movie('전남대학교') # 속성을 변경하려면 호출자를 다시 수정해야 한다. 
- 
-    # 개선된 코드
-    movie = Movie('조선대학교')
-    movie.movie_name = '전남대학교'
+    university = University('조선대학교')
+    print(university.university_name)
+    university.university_name = '전남대학교'        # 객체의 속성값에 직접 접근하는듯이 사용하지만 
+                                                    # 실제로는 메서드 호출을 통해 변수에 접근한다. 
+    print(university_university_name)
   
 ```
 > **Result**
@@ -310,6 +309,20 @@ string | value -> 문자열형
 >> ============ setter를 통해 대학교 이름을 변경합니다============  
 >> 변경 후 대학 이름 : 전남대학교 
 
+만약 프로퍼티(property)가 없었다면 대학교 이름을 아래처럼 불편하게 수정해야 했을지도 모른다.  
+```property```를 이용하면 클래스의 정의에 있는 코드만 수정하면 손쉽게 속성을 변경 할 수 있다.
+
+```
+  기존코드
+  > university = University('조선대학교')
+  > university = University('전남대학교')
+  
+  개선된 코드
+  > university = University('조선대학교') 
+  > university.university_name = '전남대학교'
+```
+만약 ```setter``` 프로퍼티를 명시하지 않으면 읽기전용(```read-only```)이 되어 외부에서 값을 변경할 수 없습니다.  
+```setter``` 프로퍼티를 주석처리하면 ```can't set attribute```의 출력결과를 얻습니다.
 
 ## 파이썬 상속
 
