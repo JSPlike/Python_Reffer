@@ -159,9 +159,9 @@ string | value -> 문자열형
 
 ## 객체 지향 프로그래밍 대표 키워드 5가지
 > 1. Class(클래스) + Instance(객체)
-> 2. 추상화
-> 3. 캡슐화
-> 4. 상속
+> 2. 추상화 (Abstract)
+> 3. 캡슐화 (Encapsulation)
+> 4. 상속 (Inheritance)
 > 5. 다형성 (Overriding)
 
 앞서 설명한 클래스와 객체를 더욱 자세히 설명하려 한다.  
@@ -169,7 +169,7 @@ string | value -> 문자열형
 
 ### 1. 클래스와 객체
 
-클래스(Class) = 추상(abstract) = 타입(type) | 객체 or 오브젝트(Object) = 실체(instance) = 변수(variable)
+클래스(Class) = 추상(Abstract) = 타입(type) | 객체 or 오브젝트(Object) = 실체(instance) = 변수(variable)
 --------- | -----------
 공통 특징 | 구체
 서술 | 실제 존재
@@ -267,7 +267,7 @@ string | value -> 문자열형
 
 나도 솔직히 무슨말인지 모르겠으니, 밑에 속성으로 내려가보자.
 
-#### 3-3) 속성
+#### 3-3) 속성(Property)
 
 자바와 같은 객체 지향 언어에서는 외부로부터 바로 접근할 수 없는 prviate 객체 속성을 지원합니다.  
 이러한 언어에서는 ```private``` 속성의 값을 읽고(get) 변경(set)하기 위해 getter 메서드와 setter 메서드를 사용합니다.  
@@ -326,9 +326,38 @@ string | value -> 문자열형
 
 어렵다면 일단 넘어가자.
 
-### 4. 상속
+### 4) 상속(Inheritance)
 
-blah blah
+상속이란? 자신이나 타인이 만들어 놓은 객체에 새로운 기능을 추가해서 새로운 객체를 만들어 내는 행위이다.  
+쉽게 말해, 기능을 상속해서 새로운 기능을 만든다.  
+그렇다면 왜 상속이 필요한가? 에 답은 불필요한 반복을 줄이기 위함니다.
+
+```
+  class Class1(object):
+      def method1(self): return 'm1'
+  c1 = Class1()
+  print(c1, c1.method1())               # c1, 어떤 값에 대한 결과인지 확인이 어려우니 
+                                        # 대응하는 클래스가 무엇인지를 출력하라는 뜻이다.
+  class Class3(Class1):                 # Class3가 Class1을 상속 받는다.
+      def method2(self): return 'm2'    # Class3가 Class1의 기능을 가짐과 동시에 method2를 추가했다.
+  c3 = Class3()
+  print(c3, c3.method1())
+  print(c3, c3.method2())
+
+  class Class2(object):
+      def method1(self): return 'm1'
+      def method2(self): return 'm2'
+  c2 = Class2()
+  print(c2, c2.method1())
+  print(c2, c2.method2())
+  
+```
+> **Result**
+>> <__main__.Class1 object at 0xb757dfec> m1  
+>> <__main__.Class3 object at 0xb758704c> m1  
+>> <__main__.Class3 object at 0xb758704c> m2  
+>> <__main__.Class2 object at 0xb758708c> m1  
+>> <__main__.Class2 object at 0xb758708c> m2  
 
 ## 파이썬 클래스 멤버
 
