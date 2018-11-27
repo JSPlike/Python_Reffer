@@ -180,8 +180,8 @@ string | value -> 문자열형
 
 위의 내용에 따라 클래스의 공통의 속성이나 기능을 묶어 이름을 붙이는 것을 자료의 추상화라고 한다.
 
-![Alt text](/path/to/explain_image1.jpg)
-
+![Alt text](/Python_Reffer/explain_image1.jpg)
+      
 ### 캡슐화 (Encapsulation)
 
 객체가 부품 이라고 가정한다면, 객체를 만드는 과정은 좋은 부품을 만드는 과정이라고 생각하면 된다.
