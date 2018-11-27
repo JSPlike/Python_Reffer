@@ -208,18 +208,6 @@ string | value -> 문자열형
 > 10
 > 20
 #### 3-2) set/get 메소드
-객체 지향 언어에서는 외부로부터 바로 접근할 수 없는 private 객체 속성을 지원합니다.
-
-이러한 언어에서는 private 속성 의 값을 읽고(get) 변경(set)하기 위해서 getter 메서드와 setter 메서드를 사용합니다.
-
-하지만, 파이썬에서는 getter 메서드나 setter 메서드가 없습니다.
-
-파이썬에서 선언되는 모든 속성(변수)와 메서드는 public이기 때문입니다.
-
-파이썬에서 사용자가 속성에 직접 접근을 막기 위해 getter 또는 setter 메서드 대신에 프로퍼티(property)를 사용합니다.
-> 참고 : 변수명에 홑밑줄(_)과 곁밑줄(__)이 있습니다.
->> * 홑밑줄(single underscore) : 보통 내부적으로 사용하는 변수일 때 사용합니다.
->> * 곁밑줄(double underscore) : 클래스 외부에서 접근할 수 없도록 내부 변수로 만듭니다.
 
 ```
   class C:                      
@@ -240,6 +228,49 @@ string | value -> 문자열형
 > **Result**
 > 10
 > 20
+
+#### 3-2) 왜 set/get 메소드를 사용해야 하나?
+
+파이썬의 경우 인스턴스 변수에 직접 접근이 가능하지만 아래와 같은 사례로 인해 오류가 날 수 있다.
+
+만약 누군가가 v1의 값에 'one'이라는 문자열 데이터를 넣었을 때, 프로그램이 과연 이해할 것인가?
+
+그리고 정해진 v1의 값에 누군가가 다시 바꾸는 과정을 못하게 막을 것인가?
+
+이런 단순한 문제부터 이해하고 코딩한다면 차후 복잡한 로직(조건문, 반복문 등)을 개발하는데 도움이 될 것이다.
+
+```
+  class Cal(object):
+    def __init__(self, v1, v2):
+        if isinstance(v1, int):     # v1 값이 정수형인지 검증 과정
+            self.v1 = v1
+        if isinstance(v2, int):     # v2 값이 정수형인지 검증 과정
+            self.v2 = v2
+    def add(self):
+        return self.v1+self.v2
+    def subtract(self):
+        return self.v1-self.v2
+    def setV1(self, v):
+        if isinstance(v, int):      # 만약 v가 숫자라면 :
+            self.v1 = v
+    def getV1(self):
+        return self.v1
+  c1 = Cal(10,10)
+  print(c1.add())
+  print(c1.subtract())
+  c1.setV1('one')
+  c1.v2 = 30
+  print(c1.add())
+  print(c1.subtract())
+  
+```
+> **Result**
+> 20
+> 0
+> 40
+> -20
+
+나도 솔직히 무슨말인지 모르겠다. 
 
 ## 파이썬 상속
 
