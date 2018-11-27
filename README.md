@@ -403,6 +403,12 @@ string | value -> 문자열형
 >> <__main__.CalDivide object at 0x000000000316CDA0> 200  
 >> <__main__.CalDivide object at 0x000000000316CDA0> 2.0
 
+상속이라는 것은 메소드만을 상속하는 것이 아니고 그 부모 객체가 가지고 있는 변수도 상속받는다.  
+
 ## 파이썬 클래스 멤버
+#### 4-1) 클래스 멤버와 인스턴스 멤버의 차이의 이해
+
+http://pythonstudy.xyz/python/article/19-%ED%81%B4%EB%9E%98%EC%8A%A4  
+존나 설명 잘됨
 
 ## 파이썬 Override
