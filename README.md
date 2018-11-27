@@ -207,7 +207,26 @@ string | value -> 문자열형
 > **Result**
 > 10
 > 20
-
+#### 3-2) set/get 메소드
+```
+  class C:                      
+    def __init__(self, v):      
+        self.value = v
+    def show(self):
+        print(self:value)
+    def getValue(self):
+        return self.value
+    def setValue(self, v):      # 입력값
+        self.value = v
+  c1 = C(10)                    
+  print(c1.getValue())          
+  c1.setValue(20)
+  print(c1.getValue())
+  
+```
+> **Result**
+> 10
+> 20
 
 ## 파이썬 상속
 
